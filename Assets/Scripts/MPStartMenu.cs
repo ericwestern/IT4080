@@ -21,4 +21,8 @@ public class MPStartMenu : NetworkBehaviour
         PlayerPrefs.SetString("PlayerName", playerName.text);
         NetworkManager.Singleton.StartClient();
     }
+
+    public void ExitButtonClicked() {
+        Application.Quit();
+    }
 }

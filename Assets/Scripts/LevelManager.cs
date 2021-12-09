@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MLAPI;
 using MLAPI.Messaging;
+using MLAPI.SceneManagement;
 using UnityEngine;
 
 public class LevelManager : NetworkBehaviour
@@ -70,5 +71,9 @@ public class LevelManager : NetworkBehaviour
             chatUI.SetActive(false);
             gameOverUI.SetActive(true);
         }
+    }
+
+    public void LevelExitButtonClicked() {
+        NetworkSceneManager.SwitchScene("MainMenu");
     }
 }
